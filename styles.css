@@ -1,0 +1,122 @@
+li {
+    list-style-type: none;
+    width: 200px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* border: solid black 1px; */
+}
+
+.burger{
+    width: 30px;
+    height: 30px;
+}
+
+@media (min-width: 1280px){
+.burger{
+    display: none;
+}
+#container{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.navBlockLvl1{
+    
+    display: flex;
+    padding: 15px;
+    justify-content: start;
+    position: relative;
+}
+.navBlockLvl2{
+    display: none
+}
+.arow{
+    display: none;
+}
+
+.navBlockLvl1 li:hover > .navBlockLvl2 {
+    padding: 15px;
+    width: 100%;
+    background-color: cornsilk;
+    position: absolute;
+    left: 0px;
+    display: flex;
+}
+
+}
+
+@media (max-width: 1279px){
+    #container{
+        padding-left: 100px;
+        padding-right: 100px;
+        
+    }
+
+    .burgerContainer{
+         display: flex;
+         justify-content:flex-end;
+         
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .burger:hover{
+        cursor: pointer;
+    }
+
+    .navBlockLvl1{
+        display: none;
+    }
+
+    .navBlockLvl3{
+        display: none;
+    }
+
+    .navBlockLvl1Visible{
+        display: block;
+    }
+
+    .navBlockLvl2{
+        display: none
+    }
+
+    li{
+        width: 100%;
+    }
+
+
+
+    .arrowBlock{
+         position: relative;
+         /* border: solid black 1px; */
+    }
+    .arrow{
+        position: absolute;
+        top: -2px;
+        right: 6%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid black; 
+     }
+     .arrowActive{
+        position: absolute;
+        top: -2px;
+        right: 6%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid black; 
+        transform: rotate(180deg);
+     }
+
+}
